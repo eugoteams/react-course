@@ -1,0 +1,131 @@
+/** @format */
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #ced4da;
+  opacity: 0.3;
+}
+
+.content_box {
+  width: 35rem;
+  height: 35rem;
+  /* overflow: hidden; */
+  /* overflow: auto; */
+  /* padding: 2rem; */
+  padding-top: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem;
+  color: #212529;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.3rem;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.content_header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  transform: translateY(2.5rem);
+  width: 100%;
+  height: 0.1rem;
+  background-color: gray;
+}
+
+.content_body {
+  height: 80%;
+  overflow: auto;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.content_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.content_footer_pos_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.button_container {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+.content_footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: gray;
+}
+
+/* .box_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  border: 1px solid rebeccapurple;
+  width: 80%;
+  height: 80%;
+}
+
+.box_small {
+  width: 4rem;
+  height: 4rem;
+  background-color: green;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+} */

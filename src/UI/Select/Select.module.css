@@ -1,0 +1,57 @@
+/** @format */
+
+.container {
+  width: 15rem;
+  margin: 3rem auto;
+}
+
+.input_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #868e96;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.overlay_click_handler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.input_container > input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.dropdown_container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 12rem;
+  overflow: auto;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+.dropdown_container > p {
+  font-size: 1rem;
+  padding: 0.6rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.dropdown_container > p:hover {
+  font-weight: 500;
+  background-color: #ced4da;
+  color: #212529;
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
