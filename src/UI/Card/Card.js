@@ -2,8 +2,9 @@
 
 import React, { Fragment } from "react";
 import style from "./Card.module.css";
-import { Star, Ellipsis } from "lucide-react";
+import { Star } from "lucide-react";
 import DropDown from "../Dropdown/Dropdown";
+import DotMenu from "../DotMenu/DotMenu";
 
 const Card = (props) => {
   return (
@@ -15,7 +16,7 @@ const Card = (props) => {
         </div>
         <div className={`${style.card_sub_text}`}>
           <span>due date: 2024-03-27</span>
-          <Ellipsis />
+          <DotMenu />
         </div>
         <div className={`${style.card_body}`}>
           <p>
