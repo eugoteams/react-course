@@ -1,8 +1,8 @@
 /** @format */
 
 .container {
-  width: 25rem;
-  height: 18rem;
+  width: 18rem;
+  height: 15rem;
   margin: 3rem auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0.5rem;
@@ -17,6 +17,7 @@
   text-transform: capitalize;
   font-weight: 500;
   padding: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .card_sub_text {
@@ -24,35 +25,33 @@
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
   padding: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .card_body {
   font-size: 0.9rem;
   line-height: 1.5;
-  margin: 0.3rem auto;
   height: 50%;
-  border: 1px solid red;
-
   padding: 0.5rem;
+  color: #495057;
 }
 
 .card_body > p {
-  background-color: green;
-
   overflow: hidden;
-
   text-overflow: ellipsis;
   display: -webkit-box;
+  /* number of line we want */
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
 .card_footer {
-  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: -1.5rem;
+  padding-right: 1.5rem;
 }
