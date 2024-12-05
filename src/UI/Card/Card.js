@@ -1,22 +1,41 @@
 /** @format */
 
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import style from "./Card.module.css";
 import { Star } from "lucide-react";
 import DropDown from "../Dropdown/Dropdown";
 import DotMenu from "../DotMenu/DotMenu";
 
 const Card = (props) => {
+  const [displayOverlay, setDisplayOverlay] = useState(false);
+
+  const onDotMenuListener = (dropDownState) => {
+    setDisplayOverlay((prevState) => dropDownState);
+  };
+
+  const onOverlayClickHandler = (event) => {
+    event.preventDefault();
+    setDisplayOverlay((prevState) => !prevState);
+  };
   return (
     <Fragment>
       <div className={`${style.container}`}>
+        {displayOverlay && (
+          <div
+            className={`${style.overlay_click_outside}`}
+            onClick={onOverlayClickHandler}
+          ></div>
+        )}
         <div className={`${style.card_header}`}>
           <span>make presentation make presentation make presentation</span>
           <Star />
         </div>
         <div className={`${style.card_sub_text}`}>
           <span>due date: 2024-03-27</span>
-          <DotMenu />
+          <DotMenu
+            onMenuOpenListener={onDotMenuListener}
+            defaultValue={displayOverlay}
+          />
         </div>
         <div className={`${style.card_body}`}>
           <p>

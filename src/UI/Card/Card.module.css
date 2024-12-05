@@ -10,6 +10,14 @@
   position: relative;
 }
 
+.overlay_click_outside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .card_header {
   width: 100%;
   display: flex;
