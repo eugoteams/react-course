@@ -1,9 +1,10 @@
 /** @format */
 
 .container {
-  width: 5rem;
+  width: 6rem;
   position: relative;
   z-index: 4;
+  cursor: pointer;
 }
 
 .overlay_click {
@@ -22,12 +23,20 @@
   font-size: 0.9rem;
 }
 
+.input_container > span {
+  width: 85%;
+  word-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .dropdown_container {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 35;
-  transform: translateY(-3rem);
+  transform: translateY(3rem);
 }
 
 .dropdown_container > p {

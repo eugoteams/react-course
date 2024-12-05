@@ -11,7 +11,7 @@ const Card = (props) => {
     <Fragment>
       <div className={`${style.container}`}>
         <div className={`${style.card_header}`}>
-          <p>make presentation</p>
+          <span>make presentation make presentation make presentation</span>
           <Star />
         </div>
         <div className={`${style.card_sub_text}`}>
@@ -27,7 +27,9 @@ const Card = (props) => {
           </p>
         </div>
         <div className={`${style.card_footer}`}>
-          <DropDown dataOptions={["todo", "inprogress", "done"]} />
+          <div className={`${style.dropdown_wrapper}`}>
+            <DropDown dataOptions={["todo", "inprogress", "done"]} />
+          </div>
         </div>
       </div>
     </Fragment>

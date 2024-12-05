@@ -1,12 +1,13 @@
 /** @format */
 
 .container {
-  width: 18rem;
-  height: 15rem;
+  width: 16rem;
+  height: 13.5rem;
   margin: 3rem auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
 }
 
 .card_header {
@@ -20,14 +21,22 @@
   font-size: 0.9rem;
 }
 
+.card_header > span {
+  width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .card_sub_text {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
-  margin-top: 0.3rem;
+  margin-top: 0.1rem;
   padding: 0.5rem;
   font-size: 0.8rem;
+  position: relative;
 }
 
 .card_body {
@@ -54,4 +63,9 @@
   justify-content: flex-end;
   margin-top: -1.5rem;
   padding-right: 1.5rem;
+}
+
+.dropdown_wrapper {
+  position: absolute;
+  margin-top: 2rem;
 }
