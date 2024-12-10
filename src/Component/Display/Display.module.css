@@ -1,0 +1,11 @@
+/** @format */
+
+.container {
+  width: 15rem;
+  margin: 3rem auto;
+}
+
+.container > p {
+  margin: 0.5rem;
+  text-align: center;
+}

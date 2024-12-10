@@ -9,10 +9,16 @@ import Modal from "./UI/Modal/Modal";
 import Select from "./UI/Select/Select";
 import Accordion from "./UI/Accordion/Accordion";
 import Card from "../src/UI/Card/Card";
+import useStorage from "./hooks/useStorage";
+import Display from "./Component/Display/Display";
+import SelectStore from "./Store/SelectStore";
+import { Provider } from "react-redux";
 
 function App() {
   const [modalSate, setModalState] = useState(true);
   const [selectData, setSelectData] = useState([]);
+  const { saveLocalStorage, clearLocalStorage, saveSessionStorage } =
+    useStorage();
 
   const onCLoseModalHandler = () => {
     setModalState((prevSate) => false);
@@ -35,11 +41,22 @@ function App() {
 
   useEffect(() => {
     getDataFromServer();
+    saveLocalStorage("Data to be stored in Local storage");
+    saveSessionStorage("Data in session");
   }, []);
 
-  console.log(selectData);
+  const onClickClearStorage = (event) => {
+    clearLocalStorage();
+  };
+
   return (
     <Fragment>
+      <button onClick={onClickClearStorage}>clearLocalStorage</button>
+      <Provider store={SelectStore}>
+        <Display />
+        <Select data={selectData} />
+      </Provider>
+
       {/* {modalSate && (
         <Modal
           modalHeader={"User Registration Form"}
@@ -67,8 +84,9 @@ function App() {
             </div>
           </Fragment>
         );
-      })} */}
-      <Card />
+      })}
+         <Card />
+       */}
     </Fragment>
   );
 }
