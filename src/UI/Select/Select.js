@@ -1,10 +1,13 @@
 /** @format */
 
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import style from "./Select.module.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { updateSelect } from "../../Slice/SelectSlice";
+import { useDispatch } from "react-redux";
 
 const Select = ({ data = [] }) => {
+  const dispatch = useDispatch();
   const [selectState, setSelectState] = useState({
     selectedValue: "",
     inputClicked: false,
@@ -25,6 +28,10 @@ const Select = ({ data = [] }) => {
       inputClicked: !prevState.inputClicked,
     }));
   };
+
+  useEffect(() => {
+    dispatch(updateSelect(selectState.selectedValue));
+  }, [selectState]);
   return (
     <Fragment>
       <div className={`${style.container}`}>
